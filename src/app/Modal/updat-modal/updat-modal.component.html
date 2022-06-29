@@ -1,0 +1,23 @@
+<form [formGroup]="form"  (ngSubmit)="onSubmit()">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Update type matiére</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+        <div class="form-group">
+          <div class="input-group">
+            <label>NomTypeMatiere</label>
+            <input type="text" formControlName="nomTypeMatiere" class="form-control" />
+          </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit"  class="btn btn-success"  (click)="modal.close('Save click')">Update</button>
+      <button type="reset" class="btn btn-danger">Annuler</button>
+    </div>
+</form>
+<!--(click)="updateTypeMatiere()"-->

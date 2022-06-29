@@ -1,0 +1,15 @@
+<h1 *ngIf="isAddMode">Add NomTypeMatiere</h1>
+<h1 *ngIf="!isAddMode">Edit NomTypeMatiere</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label>NomTypeMatiere</label>
+            <input type="text" formControlName="nomTypeMatiere" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary"> Save</button>
+        <button   class="btn btn-danger" routerLink="['/']">Cancel</button>
+    </div>
+</form>

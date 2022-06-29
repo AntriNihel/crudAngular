@@ -1,0 +1,15 @@
+
+<button class="btn btn-outline-primary" [routerLink]="['/add']">Ajouter</button>
+<!--get-->
+<table width='100%' style='border-collapse: collapse;'>
+    <tr>
+        <th>ID</th>
+        <th>Nom type matiére</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let typeMatiere of typeMatiereSerivce.list  ">
+        <td>{{ typeMatiere.id }}</td>
+        <td>{{ typeMatiere.nomTypeMatiere}}</td>
+        <td><button class="btn btn-outline-warning" (click)="EditTypeMatiere(typeMatiere.id)"> update</button></td>
+        <td><button class="btn btn-outline-danger" (click)="removeTypeMatiere(typeMatiere.id)"> delete   </button></td></tr>
+</table>
